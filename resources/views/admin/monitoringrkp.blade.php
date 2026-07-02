@@ -188,7 +188,6 @@
 
 </div>
 
-<!-- Modal Tambah Progres -->
 <div id="tambahProgresModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -199,7 +198,6 @@
         <form action="/admin/monitoringrkp/progres" method="POST">
             @csrf
 
-            <!-- WAJIB: kirim ID -->
             <input type="hidden" name="id" id="progres_id">
 
             <div class="form-group">
