@@ -31,20 +31,14 @@
     </main>
 
     @include('partials.footer')
-
-
-    <!-- ================= JS GLOBAL ================= -->
-
-    <!-- jQuery (dibutuhkan untuk Ajax filter Dusun→RT/RW) -->
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- SweetAlert (jika dipakai di semua halaman) -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- File JS utama -->
     <script src="{{ asset('js/admin.js') }}"></script>
 
-    <!-- Jika halaman ingin menambah JS spesifik -->
     @yield('js')
 
     <script>
