@@ -1,0 +1,162 @@
+/* LOGIN SECTION */
+.login-section {
+    min-height: calc(100vh - 120px);
+    /* tinggi layar - header + footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 🔥 ini kunci biar tengah */
+}
+
+.main-content {
+    flex: 1;
+    padding-top: 80px;
+}
+
+/* CARD LOGIN */
+.login-card {
+    width: 420px;
+    background: #1e3a8a;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.login-card h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    transition: 0.2s;
+    gap: 12px;
+}
+
+/* ICON IMAGE (kecuali toggle password) */
+.input-group img:not(.toggle-password) {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+/* INPUT FIELD */
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* EFFECT SAAT INPUT DIFOKUS */
+.input-group:focus-within {
+    background: #ffffff;
+    box-shadow: 0 0 0 2px #2563eb;
+}
+
+/* BUTTON LOGIN */
+.login-btn {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #2fcd3a;
+    color: white;
+}
+
+.login-btn:active {
+    background: #004ff8;
+    transform: scale(0.96);
+}
+
+/* PASSWORD TOGGLE */
+.password-group {
+    position: relative;
+}
+
+.password-group input {
+    width: 100%;
+    padding-right: 40px;
+    /* ruang untuk toggle icon */
+}
+
+.login-card {
+    width: 420px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: 0.3s;
+}
+
+.login-card:hover {
+    transform: translateY(-3px);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    transition: 0.2s;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 2px #60a5fa;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+
+    width: 16px;
+    /* lebih kecil */
+    height: 16px;
+
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width:600px) {
+    .login-card {
+        width: 90%;
+        padding: 30px;
+    }
+}

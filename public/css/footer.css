@@ -1,0 +1,75 @@
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+}
+
+/* efek hover 🔥 */
+.social-icons a:hover {
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+/* TEKS */
+
+.stat-card p {
+    color: #1e3a8a;
+    font-size: 15px;
+}
+
+.footer {
+    background: #1e3a8a;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-box h4 {
+    margin-bottom: 15px;
+}
+
+.footer-box p,
+.footer-box a {
+    font-size: 14px;
+    color: #dbeafe;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-box a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+}

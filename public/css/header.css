@@ -1,0 +1,307 @@
+/* BASE NAVBAR (dipakai semua role) */
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* NAVBAR ADMIN & KADUS */
+.navbar.admin,
+.navbar.kadus {
+    left: 250px;
+    width: calc(100% - 250px);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    border-bottom: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* NAVBAR WARGA */
+.navbar.warga {
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* WRAPPER (FULL WIDTH SUPAYA LOGO & MENU KE UJUNG) */
+.nav-wrapper {
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LEFT AREA */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+
+/* MENU WARGA */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: #1e3a8a;
+}
+
+
+/* LOGO */
+.logo-cilacap {
+    height: 42px;
+    width: auto;
+}
+
+
+/* USER MENU (ADMIN / KADUS) */
+.user-menu {
+    position: relative;
+}
+
+.user-trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    color: white;
+}
+
+.user-trigger svg {
+    color: white;
+}
+
+.user-trigger svg.bi-person-fill-check {
+    width: 30px;
+    /* lebar icon */
+    height: 30px;
+    /* tinggi icon */
+}
+
+.user-trigger img {
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
+    color: white;
+}
+
+
+.navbar.admin,
+.navbar.kadus {
+    height: 60px;
+}
+
+
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-width: 140px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background: #f2f2f2;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* ITEM DROPDOWN */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+/* ICON DROPDOWN */
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* HOVER */
+.dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+/* LOGOUT STYLE */
+.logout-link {
+    color: #e53935;
+    font-weight: 500;
+}
+
+.logout-link:hover {
+    background: #fff1f1;
+}
+
+
+/* BURGER BUTTON */
+.burger-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Konten utama dorong footer */
+.main-content {
+    flex: 1;
+    /* sesuaikan tinggi navbar */
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+/* Judul utama */
+.logo-text .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* Sub judul */
+.logo-text .subtitle {
+    font-size: 12px;
+    color: #555;
+}
+
+.menu a.active {
+    color: #1e3a8a;
+    font-weight: 700;
+    border-bottom: 2px solid #1e3a8a;
+}
+
+/* RESPONSIVE HEADER WARGA */
+/* TABLET */
+@media (max-width: 900px) {
+
+    .nav-wrapper {
+        padding: 0 20px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .logo-cilacap {
+        height: 38px;
+    }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .nav-wrapper {
+        padding: 0 12px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .logo-cilacap {
+        height: 34px;
+    }
+
+}
+
+/* RESPONSIVE HEADER ADMIN*/
+
+@media (max-width:768px) {
+
+    .navbar.admin,
+    .navbar.kadus {
+        left: 0;
+        width: 100%;
+    }
+
+    .burger-btn {
+        display: block;
+        margin-right: 15px;
+    }
+}
+
+/* RESPONSIVE ADMIN */
+@media (max-width:768px) {
+
+    .main-content.admin {
+        margin-left: 0;
+        padding: 70px 15px 20px 15px;
+    }
+
+}
+
+.main-content.warga {
+    padding-top: 60px !important;
+}

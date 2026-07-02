@@ -1,0 +1,194 @@
+body {
+    background: #f4f6fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-section {
+    padding: 60px 20px;
+}
+
+.form-container {
+    max-width: 760px;
+    margin: auto;
+    background: #1e3a8a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    background: white;
+    color: #0046b8;
+    padding: 20px 28px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-body {
+    padding: 42px 90px 34px;
+    color: white;
+}
+
+form h3 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 24px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label,
+.benefit-title {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 46px;
+    padding: 0 16px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #374151;
+    background: white;
+}
+
+.form-group input::placeholder {
+    color: #7b8494;
+}
+
+/* Volume dan Satuan sejajar */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Penerima manfaat */
+.benefit-section {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.benefit-title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.benefit-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.benefit-grid .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.benefit-grid .form-group label {
+    margin-bottom: 7px;
+}
+
+.form-button {
+    text-align: center;
+    margin-top: 34px;
+}
+
+.form-button button {
+    background: white;
+    color: #0046b8;
+    border: none;
+    min-width: 210px;
+    padding: 13px 28px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.form-button button:hover {
+    background: #f1f5ff;
+}
+
+.form-info {
+    color: #374151;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.form-disable {
+    background: #8bd0f0;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 95%;
+    }
+
+    .form-body {
+        padding: 32px 28px;
+    }
+
+    .form-row,
+    .benefit-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .benefit-grid .form-group {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section {
+        padding: 30px 10px;
+    }
+
+    .form-title {
+        font-size: 13px;
+        padding: 15px 18px;
+    }
+
+    form h3 {
+        font-size: 18px;
+    }
+
+    .form-body {
+        padding: 28px 18px;
+    }
+
+    .form-button button {
+        min-width: 170px;
+        font-size: 12px;
+        padding: 11px 22px;
+    }
+
+    .form-info {
+        font-size: 11px;
+    }
+}
