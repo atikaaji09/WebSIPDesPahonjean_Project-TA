@@ -15,7 +15,6 @@
 
     <div class="table-container">
 
-        {{-- FORM FILTER --}}
         <form action="{{ route('admin.rpjmdes.monitoring') }}" method="GET">
 
             <div class="table-controls">
@@ -56,7 +55,6 @@
                         @endforeach
                     </select>
 
-                    {{-- EXPORT (tidak pakai form biar tidak nested) --}}
                     <a href="{{ url('/admin/rpjmdes/export') }}?dusun_id={{ request('dusun_id') }}&periode_id={{ request('periode_id') }}"
                         class="btn-export">
                         Export Excel
