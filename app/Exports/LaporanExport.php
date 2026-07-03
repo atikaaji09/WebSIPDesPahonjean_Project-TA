@@ -30,14 +30,12 @@ class LaporanExport implements FromView
         $tahun = $this->tahun;
         $dusunId = $this->dusunId;
 
-        // filter tahun
         if ($tahun) {
             $query->whereHas('rkpdes', function ($q) use ($tahun) {
                 $q->where('tahun', $tahun);
             });
         }
 
-        // filter dusun
         if ($dusunId) {
             $query->whereHas('user', function ($q) use ($dusunId) {
                 $q->where('dusun_id', $dusunId);

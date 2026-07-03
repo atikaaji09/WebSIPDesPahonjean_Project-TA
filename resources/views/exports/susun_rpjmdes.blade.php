@@ -14,15 +14,11 @@ $totalKolom = 13 + count($tahunRange);
 @endphp
 
 <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width:100%;">
-
-    {{-- ================= JUDUL ================= --}}
     <tr>
         <td colspan="{{ $totalKolom }}" style="text-align:center; font-weight:bold;">
             RENCANA RPJMDes DESA
         </td>
     </tr>
-
-    {{-- ================= HEADER ================= --}}
     <thead>
         <tr>
             <th rowspan="2">No</th>
@@ -52,8 +48,6 @@ $totalKolom = 13 + count($tahunRange);
             @endforeach
         </tr>
     </thead>
-
-    {{-- ================= BODY ================= --}}
     <tbody>
 
         @if($data->isEmpty())
@@ -68,7 +62,6 @@ $totalKolom = 13 + count($tahunRange);
 
         @foreach($data->groupBy('bidang_id') as $bidangGroup)
 
-        {{-- ===== BIDANG ===== --}}
         <tr>
             <td>{{ $noBidang }}</td>
             <td colspan="{{ $totalKolom - 1 }}">
@@ -80,7 +73,6 @@ $totalKolom = 13 + count($tahunRange);
 
         @foreach($bidangGroup->groupBy('sub_bidang_id') as $subGroup)
 
-        {{-- ===== SUB BIDANG ===== --}}
         <tr>
             <td>{{ $noBidang }}.{{ $noSub }}</td>
             <td colspan="{{ $totalKolom - 1 }}">
@@ -98,7 +90,6 @@ $totalKolom = 13 + count($tahunRange);
         : json_decode($item->tahun_pelaksanaan, true);
         @endphp
 
-        {{-- ===== KEGIATAN ===== --}}
         <tr>
             <td>{{ $noBidang }}.{{ $noSub }}.{{ $noKeg }}</td>
 

@@ -43,7 +43,6 @@
 
             <div class="table-filter">
 
-                {{-- FILTER --}}
                 <form method="GET" action="{{ route('admin.kelolausulan') }}">
 
                     <input type="hidden" name="entries" value="{{ request('entries') }}">
@@ -95,7 +94,6 @@
                 </thead>
 
                 @php
-                // Ambil semua RT/RW beserta relasi dusun
                 $rtRws = \App\Models\Rtrw::with('dusun')->get();
                 @endphp
 

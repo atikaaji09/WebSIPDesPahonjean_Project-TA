@@ -78,15 +78,11 @@ class SusunRkpdesExport implements FromView, WithStyles, WithEvents
 
                 $sheet->getPageSetup()->setOrientation(PageSetup::ORIENTATION_LANDSCAPE);
 
-                // AUTO SIZE A-Q (17 kolom)
                 foreach (range('A', 'Q') as $col) {
                     $sheet->getColumnDimension($col)->setAutoSize(true);
                 }
 
-                // TITLE
                 $sheet->mergeCells('A1:Q1');
-
-                // HEADER
                 $sheet->mergeCells('A2:A3');
                 $sheet->mergeCells('B2:B3');
                 $sheet->mergeCells('C2:C3');
@@ -103,12 +99,10 @@ class SusunRkpdesExport implements FromView, WithStyles, WithEvents
                 $sheet->mergeCells('P2:P3');
                 $sheet->mergeCells('Q2:Q3');
 
-                // ALIGN
                 $sheet->getStyle('A1:Q3')->getAlignment()
                     ->setHorizontal(Alignment::HORIZONTAL_CENTER)
                     ->setVertical(Alignment::VERTICAL_CENTER);
 
-                // BORDER
                 $sheet->getStyle('A1:Q300')->applyFromArray([
                     'borders' => [
                         'allBorders' => [
@@ -117,10 +111,8 @@ class SusunRkpdesExport implements FromView, WithStyles, WithEvents
                     ],
                 ]);
 
-                // WRAP TEXT
                 $sheet->getStyle('B')->getAlignment()->setWrapText(true);
 
-                // ROW HEIGHT
                 $sheet->getRowDimension(2)->setRowHeight(30);
                 $sheet->getRowDimension(3)->setRowHeight(25);
             },

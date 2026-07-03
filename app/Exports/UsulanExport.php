@@ -26,12 +26,8 @@ class UsulanExport implements FromArray
             ->get();
 
         $rows = [];
-
-        // HEADER JUDUL
         $rows[] = ['REKAPITULASI USULAN KEGIATAN'];
         $rows[] = [];
-
-        // HEADER TABEL
         $rows[] = [
             'No',
             'Nama',
