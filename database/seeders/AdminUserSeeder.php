@@ -11,13 +11,13 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         User::firstOrCreate(
-            ['username' => 'admin'], // kunci unik
+            ['username' => 'admin123'],
             [
                 'name' => 'Admin',
-                'dusun_id' => null, // admin tidak perlu dusun
+                'dusun_id' => null,
                 'role' => 'admin',
                 'is_active' => true,
-                'password' => Hash::make('admin123'),
+                'password' => Hash::make('admin321'),
             ]
         );
     }
